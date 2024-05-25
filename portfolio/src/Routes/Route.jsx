@@ -1,5 +1,4 @@
-import React from "react";
-import createBrowserRouter from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layouts/Main";
 import Home from "../components/Home/Home";
 import ProjectDetails from "../components/ProjectDetails/ProjectDetails";
