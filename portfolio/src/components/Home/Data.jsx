@@ -2,8 +2,37 @@ import React from "react";
 
 const Data = () => {
   return (
+    // <div
+    //   className="container  h-full mx-auto px-4 py-6 max-w-5xl col-span-2"
+    //   data-aos-delay="600"
+    //   data-aos="fade-up"
+    // >
+    //   <h1 className="text-4xl font-bold mb-4 flex items-center">
+    //     Aayush Ghimire
+    //     <span className="ml-2">
+
+    //     </span>
+    //   </h1>
+    //   <h3 className="relative text-2xl font-normal pl-12 mb-4">
+    //     MERN stack developer
+    //     <span className="absolute w-12 h-0.5 bg-gray-800 top-1/2 left-0 transform -translate-y-1/2"></span>
+    //   </h3>
+    //   <p className="max-w-lg mb-6">
+    //     A programmer, a problem solver who loves Programming, Developing,
+    //     learning, and Problem-Solving. I am passionate about working with
+    //     dedicated teams to build efficient and robust applications that could
+    //     help make the world become more open and more connected.
+    //   </p>
+    //   <a
+    //     href="#contact"
+    //     className="inline-flex items-center  bg-blue-600 text-white rounded-lg hover:bg-blue-700 mt-10 text-[var(--text-color)] text-[15px] leading-[1.3] uppercase py-[13px] px-[28px] bg-[var(--main-color)]  border border-transparent transition-all duration-600 ease-in-out"
+    //   >
+    //     Say Hello
+
+    //   </a>
+    // </div>
     <div
-      className="container mx-auto px-4 py-6 max-w-5xl col-span-2"
+      className="container h-full mx-auto px-4 py-6 max-w-5xl col-span-2"
       data-aos-delay="600"
       data-aos="fade-up"
     >
@@ -73,7 +102,7 @@ const Data = () => {
       </p>
       <a
         href="#contact"
-        className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 mt-10 text-[var(--text-color)] text-[15px] leading-[1.3] uppercase py-[13px] px-[28px] bg-[var(--main-color)] rounded-[16px] border border-transparent transition-all duration-600 ease-in-out"
+        className="inline-flex items-center bg-blue-600 text-white rounded-lg hover:bg-blue-700 mt-10 text-[15px] leading-[1.3] uppercase py-3 px-7 transition-all duration-600 ease-in-out"
       >
         Say Hello
         <svg

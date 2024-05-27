@@ -1,6 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+import {
+  FaHome,
+  FaUser,
+  FaFileAlt,
+  FaBriefcase,
+  FaImages,
+  FaEnvelope,
+  FaSun,
+  FaMoon,
+  FaTimes,
+  FaBars,
+} from "react-icons/fa";
 const Header = () => {
   // const [toggle, showMenu] = useState(false);
   const [toggle, setToggle] = useState(false);
@@ -111,12 +123,12 @@ const Header = () => {
     // </header>
     <header className="min-w-full fixed top-0 left-0 z-50 bg-white dark:bg-gray-800 transition-colors duration-300">
       <nav className="container  mx-8 flex items-center justify-between h-16 px-7 md:px-8">
-        <Link
+        <RouterLink
           to="/"
           className="text-2xl font-semibold text-gray-900 dark:text-white"
         >
           AG
-        </Link>
+        </RouterLink>
         <div
           className={`${
             toggle ? "block" : "hidden"
@@ -124,69 +136,81 @@ const Header = () => {
         >
           <ul className="flex flex-col items-center gap-6 md:flex-row md:gap-8">
             <li>
-              <a
-                href="#home"
-                className="text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300"
+              <ScrollLink
+                to="home"
+                smooth={true}
+                duration={500}
+                className="  flex items-center text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300 cursor-pointer"
               >
-                <i className="uil uil-estate text-lg md:text-base mr-2"></i>
+                <FaHome className="text-lg md:text-base hidden lg:block mr-2" />
                 Home
-              </a>
+              </ScrollLink>
             </li>
             <li>
-              <a
-                href="#about"
-                className="text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300"
+              <ScrollLink
+                to="about"
+                smooth={true}
+                duration={500}
+                className=" flex items-center text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300 cursor-pointer"
               >
-                <i className="uil uil-user text-lg md:text-base mr-2"></i>
+                <FaUser className="text-lg md:text-base mr-2 hidden lg:block" />
                 About
-              </a>
+              </ScrollLink>
             </li>
             <li>
-              <a
-                href="#skills"
-                className="text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300"
+              <ScrollLink
+                to="skills"
+                smooth={true}
+                duration={500}
+                className="  flex items-center text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300 cursor-pointer"
               >
-                <i className="uil uil-file-alt text-lg md:text-base mr-2"></i>
+                <FaFileAlt className="text-lg md:text-base mr-2 hidden lg:block" />
                 Skills
-              </a>
+              </ScrollLink>
             </li>
             <li>
-              <a
-                href="#services"
-                className="text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300"
+              <ScrollLink
+                to="services"
+                smooth={true}
+                duration={500}
+                className=" flex items-center text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300 cursor-pointer"
               >
-                <i className="uil uil-briefcase-alt text-lg md:text-base mr-2"></i>
+                <FaBriefcase className="text-lg md:text-base mr-2 hidden lg:block" />
                 Services
-              </a>
+              </ScrollLink>
             </li>
             <li>
-              <a
-                href="#portfolio"
-                className="text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300"
+              <ScrollLink
+                to="portfolio"
+                smooth={true}
+                duration={500}
+                className="flex items-center text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300 cursor-pointer"
               >
-                <i className="uil uil-scenery text-lg md:text-base mr-2"></i>
+                <FaImages className="text-lg md:text-base mr-2 hidden lg:block" />
                 Portfolio
-              </a>
+              </ScrollLink>
             </li>
             <li>
-              <a
-                href="#contact"
-                className="text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300"
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={500}
+                className=" flex items-center text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300 cursor-pointer"
               >
-                <i className="uil uil-message text-lg md:text-base mr-2"></i>
+                <FaEnvelope className="text-lg md:text-base mr-2 hidden lg:block" />
                 Contact
-              </a>
+              </ScrollLink>
             </li>
             <li>
               <button
                 onClick={switchTheme}
                 className="flex items-center text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-300"
               >
-                <i
-                  className={`uil ${
-                    theme === "dark" ? "uil-sun" : "uil-moon"
-                  } text-lg md:text-base mr-2`}
-                ></i>
+                {theme === "dark" ? (
+                  <FaSun className="text-lg md:text-base mr-2" />
+                ) : (
+                  <FaMoon className="text-lg md:text-base mr-2" />
+                )}
                 {theme === "dark" ? "Light" : "Dark"}
               </button>
             </li>
@@ -195,11 +219,11 @@ const Header = () => {
             className="absolute top-6 right-6 md:hidden"
             onClick={() => showMenu(!toggle)}
           >
-            <i className="uil uil-times text-2xl text-gray-900 dark:text-white"></i>
+            <FaTimes className="text-2xl text-gray-900 dark:text-white" />
           </button>
         </div>
         <button className="md:hidden" onClick={() => showMenu(!toggle)}>
-          <i className="uil uil-apps text-2xl text-gray-900 dark:text-white"></i>
+          <FaBars className="text-2xl text-gray-900 dark:text-white" />
         </button>
       </nav>
     </header>

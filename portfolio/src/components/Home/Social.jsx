@@ -5,7 +5,7 @@ import { GrGithub } from "react-icons/gr";
 const Social = () => {
   return (
     <div
-      className="flex flex-col justify-center  items-start space-y-4 mx-3"
+      className="flex absolute flex-col justify-center  items-start space-y-4 mx-3"
       data-aos-delay="700"
       data-aos="fade-right"
     >
