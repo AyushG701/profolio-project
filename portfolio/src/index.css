@@ -10,7 +10,11 @@
   .font-poppins {
     font-family: "Poppins", sans-serif;
   }
+  .font-kalam {
+    font-family: "Kalam", cursive;
+  }
 }
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
