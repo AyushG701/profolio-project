@@ -25,10 +25,10 @@ const Qualification = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="bg-white p-6 shadow-md rounded-lg transform hover:scale-105 transition duration-300">
             <h3 className="text-2xl font-semibold text-purple-600 mb-2">
-              BSC in Statistics
+              Bachelors in Information Technology
             </h3>
             <span className="block text-gray-500 mb-4">
-              Jatiya Kabi Kazi Nazrul Islam University
+              Tribhuvan University
             </span>
             <div className="flex items-center text-gray-400">
               <AiOutlineCalendar className="mr-2" />

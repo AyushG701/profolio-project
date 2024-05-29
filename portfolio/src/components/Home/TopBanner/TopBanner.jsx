@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import Social from "../Social";
 import Data from "../Data";
 import ScrollDown from "../ScrollDown";
-
+import ayuImage from "../../../assets/aayush.jpg";
 const TopBanner = () => {
   useEffect(() => {
     Aos.init({
@@ -25,7 +25,14 @@ const TopBanner = () => {
             <Data />
           </div>
           <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center mb-8 md:mb-0">
-            <div className="bg-gray-300 rounded-full w-48 h-48 md:w-60 md:h-60 animate-pulse"></div>
+            <div className="bg-gray-300 rounded-full w-48 h-48 md:w-60 md:h-60 animate-pulse">
+              <div
+                data-aos="fade-down"
+                data-aos-delay="500"
+                className="bg-cover bg-center w-full h-full animate-profileAnimate shadow-insetWhite"
+                style={{ backgroundImage: `url(${ayuImage})` }}
+              ></div>
+            </div>
           </div>
         </div>
       </div>
