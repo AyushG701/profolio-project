@@ -1,5 +1,6 @@
 import React from "react";
-// import aboutImage from "../../assets/sifat.png";
+import aboutImage from "../../assets/aboutImage.png";
+
 // import CV from "../../assets/ayush-resume.pdf";
 import Info from "./Info";
 
@@ -14,7 +15,7 @@ const About = () => {
       </span>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <img
-          src={"aboutImage"}
+          src={aboutImage}
           alt="About me"
           className="w-64 h-64 md:w-88 md:h-88 rounded-full mx-auto"
         />
